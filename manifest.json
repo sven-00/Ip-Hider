@@ -1,0 +1,38 @@
+{
+
+  "manifest_version": 2,
+  "name": "IpHider",
+  "version": "2.0",
+
+  "description": "Replaces ip addresses with a bunch of X's",
+
+  "icons": {
+    "48": "icons/ip.png"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+        "id": "ImBroekman@protonmail.com",
+        "strict_min_version": "48.0"
+    }
+  },
+
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": ["storage"],
+
+  "browser_action": {
+    "default_icon": "icons/ip.png"
+  }
+
+}
